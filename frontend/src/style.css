@@ -40,8 +40,9 @@ body {
 }
 
 #app {
-  width: 98vw;
-  height: 98vh;
+  margin-top: 5px;
+  width: 99vw;
+  height: 99vh;
   text-align: center;
 }
 

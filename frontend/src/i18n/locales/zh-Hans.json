@@ -8,7 +8,7 @@
     "open": "打开",
     "save": "保存"
   },
-  "languages": {
+  "locales": {
     "ja": "日本語",
     "en": "English",
     "zh-Hans": "简体中文"

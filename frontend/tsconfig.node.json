@@ -4,7 +4,10 @@
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "node",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ]
   },
   "include": [
     "vite.config.ts"

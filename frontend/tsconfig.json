@@ -35,6 +35,7 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
+    "src/**/*",
     "vite.config.ts"
   ],
   "references": [

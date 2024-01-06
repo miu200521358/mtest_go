@@ -1,17 +1,9 @@
 {
-  "name": "frontend",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
-  },
   "dependencies": {
     "@quasar/extras": "^1.16.9",
     "create-vite": "^5.1.0",
-    "mlib_vue": "github:miu200521358/mlib_vue",
+    "mlib_vue": "file:../../mlib_vue",
+    "pinia": "^2.1.7",
     "quasar": "^2.14.2",
     "vue": "^3.2.37",
     "vue-i18n": "^9.8.0"
@@ -29,5 +21,14 @@
     "typescript": "^4.6.4",
     "vite": "^3.0.7",
     "vue-tsc": "^0.39.5"
-  }
+  },
+  "name": "frontend",
+  "private": true,
+  "scripts": {
+    "build": "vue-tsc && vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "version": "0.0.0"
 }

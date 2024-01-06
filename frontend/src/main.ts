@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createPinia } from "pinia";
 import { Quasar } from 'quasar'
 import quasarLang from 'quasar/lang/ja'
 import i18n from "@/i18n";
@@ -21,6 +22,8 @@ myApp.use(Quasar, {
     lang: quasarLang,
 })
 
-myApp.use(i18n);
+myApp.use(i18n)
+myApp.use(createPinia())
+
 // Assumes you have a <div id="app"></div> in your index.html
 myApp.mount('#app')
