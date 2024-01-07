@@ -28,10 +28,10 @@ C:\MMD\mtest_go\frontend>
 
 npm install create-vite
 npm install --save quasar @quasar/extras
-npm install --save-dev @quasar/vite-plugin sass@^1.33.0
-npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+npm install --save-dev @quasar/vite-plugin sass
+npm install -D tailwindcss postcss autoprefixer
 npm install -D @vue/tsconfig
-npm install vue-i18n@9
+npm install vue-i18n
 npm install pinia
 ```
 
@@ -54,20 +54,43 @@ npm install
 wails dev -assetdir ./frontend/dist -wailsjsdir ./frontend/src -reloaddirs ./frontend/src/views,./frontend/src/i18n/locales -save
 ```
 
-## About
+## やり直し
 
-This is the official Wails Vue-TS template.
+```
+(mtool) C:\MMD\mtest_go>npm init vue@latest
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
+Vue.js - The Progressive JavaScript Framework
 
-## Live Development
+√ Project name: ... frontend
+√ Add TypeScript? ... Yes
+√ Add JSX Support? ... No
+√ Add Vue Router for Single Page Application development? ... No
+√ Add Pinia for state management? ... Yes
+√ Add Vitest for Unit Testing? ... Yes
+√ Add an End-to-End Testing Solution? » No
+√ Add ESLint for code quality? ... Yes
+√ Add Prettier for code formatting? ... Yes
 
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
+Scaffolding project in C:\MMD\mtest_go\frontend...
 
-## Building
+Done. Now run:
 
-To build a redistributable, production mode package, use `wails build`.
+  cd frontend
+  npm install
+  npm run format
+  npm run dev
+```
+
+```
+npm install --save quasar @quasar/extras
+npm install --save-dev @quasar/vite-plugin sass
+npm install --save-dev @types/webpack
+npm install -D tailwindcss postcss autoprefixer
+npm install -D @vue/tsconfig
+npm install vue-i18n
+```
+
+```
+(mtool) C:\MMD\mtest_go\frontend\src\components>mklink /D molecules C:\MMD\mlib_vue\src\components\molecules
+molecules <<===>> C:\MMD\mlib_vue\src\components\molecules のシンボリック リンクが作成されました
+```

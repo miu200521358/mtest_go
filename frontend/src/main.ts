@@ -23,6 +23,7 @@ myApp.use(Quasar, {
 })
 
 myApp.use(i18n)
+
 myApp.use(createPinia())
 
 // Assumes you have a <div id="app"></div> in your index.html

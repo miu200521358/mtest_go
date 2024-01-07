@@ -6,8 +6,8 @@
 import { watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import HistoryFile from '@mlib/components/file/HistoryFile.vue'
-import { useLocaleStore } from "@mlib/components/locale/localeStore";
+import HistoryFile from "@/components/molecules/file/HistoryFile.vue";
+import { useLocaleStore } from "@/components/molecules/locale/localeStore";
 
 const { locale } = useI18n();
 const localeStore = useLocaleStore();
