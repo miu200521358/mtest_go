@@ -3,7 +3,7 @@
 ## 新規作成
 
 ```
-(mtool) C:\MMD\mtest_go>wails init -n mtest_go -t vue-ts
+(mtool) C:\MMD\mtest_go>wails init -n mtest_go -t vue-ts -ide vscode
 Wails CLI v2.7.1
 
 

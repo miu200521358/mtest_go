@@ -21,6 +21,9 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@mlib/*": [
+        "C:/MMD/mlib_vue/src/*"
       ]
     },
     "resolveJsonModule": true,

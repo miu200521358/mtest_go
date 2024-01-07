@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import HistoryFile from 'mlib_vue/src/components/molecules/HistoryFile.vue'
+import HistoryFile from '@mlib/components/file/HistoryFile.vue'
 </script>

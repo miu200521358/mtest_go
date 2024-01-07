@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import LocaleSelect from "mlib_vue/src/components/molecules/LocaleSelect.vue";
+import LocaleSelect from "@mlib/components/locale/LocaleSelect.vue";
 import { SaveConfig, LoadConfig } from "@/wailsjs/go/app/App";
 
 const initialLocale = ref<string>('');
