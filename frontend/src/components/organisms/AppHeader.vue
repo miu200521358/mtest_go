@@ -6,24 +6,30 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
+
 import LocaleSelect from "@mlib/components/locale/LocaleSelect.vue";
+import { useLocaleStore } from "@mlib/components/locale/localeStore";
+
 import { SaveConfig, LoadConfig } from "@/wailsjs/go/app/App";
 
-const initialLocale = ref<string>('');
+const initialLocale = ref<string>('ja');
+const localeStore = useLocaleStore();
 
 const handleLocaleChange = async (newLocale: string) => {
-    console.log("Locale selected:", newLocale);
+    console.log("AppHeader: Locale selected:", newLocale);
     await SaveConfig("locale", [newLocale], 1);
-    console.log("Locale selected saved:", newLocale);
+    console.log("AppHeader: Locale selected saved:", newLocale);
+    localeStore.setLocale(newLocale); // Pinia ストアを更新
 };
 
 onMounted(async () => {
-    console.log("onMounted");
+    console.log("AppHeader: onMounted");
     const savedLocales = await LoadConfig("locale");
-    console.log("onMounted savedLocales:", savedLocales, (savedLocales && savedLocales.length > 0));
+    console.log("AppHeader: onMounted savedLocales:", savedLocales);
     if (savedLocales && savedLocales.length > 0) {
-        initialLocale.value = savedLocales[0];
-        console.log("onMounted savedLocales initialLocale:", savedLocales, initialLocale.value);
+        console.log("AppHeader: Setting locale to", savedLocales[0]);
+        initialLocale.value = savedLocales[0]; // 初期Localeを設定
+        localeStore.setLocale(savedLocales[0]);
     }
 });
 </script>
